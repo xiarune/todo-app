@@ -2,14 +2,18 @@
   "name": "todo-app",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://xiarune.github.io/todo-app",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "build": "expo build:web",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d web-build"
   },
   "dependencies": {
-    "@expo/webpack-config": "^18.0.1",
+    "@expo/webpack-config": "^19.0.1",
     "@rneui/base": "^4.0.0-rc.8",
     "@rneui/themed": "^4.0.0-rc.8",
     "expo": "~52.0.38",
@@ -22,7 +26,9 @@
     "react-native-web": "~0.18.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "gh-pages": "^6.3.0"
   },
   "private": true
 }
+
